@@ -1,15 +1,14 @@
 import styled from "styled-components";
-import GlobalStyle from "./styles/GlobalStyle";
+import Sidebar from "./components/Sidebar";
 const MainApp = styled.div`
-  background-color: red;
+  position: relative;
 `;
 
 function App() {
   return (
     <>
-      <GlobalStyle />
       <MainApp>
-        <h1>Hello styled</h1>
+        <Sidebar />
       </MainApp>
     </>
   );
