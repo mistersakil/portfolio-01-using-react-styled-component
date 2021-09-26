@@ -27,6 +27,8 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--bgPrimary);
     }
 
+    
+
 `;
 
 export default GlobalStyle;

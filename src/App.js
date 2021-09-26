@@ -1,16 +1,18 @@
-import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
-const MainApp = styled.div`
-  position: relative;
-`;
+import MainContent from "./components/MainContent";
+import Application from "./components/Application";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    console.log(document.title);
+    document.title = `Home - ${document.title}`;
+  }, []);
   return (
-    <>
-      <MainApp>
-        <Sidebar />
-      </MainApp>
-    </>
+    <Application>
+      <Sidebar />
+      <MainContent />
+    </Application>
   );
 }
 
