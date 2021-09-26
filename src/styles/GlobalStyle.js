@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         --colorPrimary : rgba(30,30,30,1);
         --colorSecondary: rgba(240,240,240,1)
         --colorGrey: rgba(120,120,120,1); 
+        --colorBrand: palevioletred;
     }
     *{
         margin: 0;
