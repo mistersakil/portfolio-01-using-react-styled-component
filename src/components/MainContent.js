@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Home from "./pages/Home";
 const MainContentStyle = styled("main")`
   width: calc(100% - 300px);
   min-height: 100vh;
@@ -30,6 +31,7 @@ const MainContent = () => {
         <Line />
         <Line />
       </Lines>
+      <Home></Home>
     </MainContentStyle>
   );
 };

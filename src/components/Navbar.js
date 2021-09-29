@@ -23,7 +23,7 @@ const NavbarWrapperStyle = styled("div")`
     display: block;
     text-align: center;
     .img {
-      width: 15rem;
+      width: 18rem;
       height: 20rem;
       padding: 1rem;
       border-radius: 150%;
