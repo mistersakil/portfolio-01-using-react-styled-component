@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-tsparticles";
-import particles_config from "./data/particles_config.json";
+import home_particles from "./data/home_particles.json";
 import styled from "styled-components";
 
 const ParticlesStyle = styled("div")`
@@ -35,7 +35,7 @@ class Particle extends Component {
           id="tsparticles"
           init={this.particlesInit}
           loaded={this.particlesLoaded}
-          options={particles_config}
+          options={home_particles}
         />
       </ParticlesStyle>
     );

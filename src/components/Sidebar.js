@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
-const SidebarStyle = styled.section`
+const SidebarStyle = styled.aside`
   position: fixed;
   top: 0;
   width: 300px;

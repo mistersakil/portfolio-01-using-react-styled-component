@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Home from "./pages/Home";
-const MainContentStyle = styled("main")`
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import EducationsPage from "./pages/EducationsPage";
+import ContactPage from "./pages/ContactPage";
+import SkillsPage from "./pages/SkillsPage";
+import PortfolioPage from "./pages/PortfolioPage";
+const MainContentStyle = styled("aside")`
   width: calc(100% - 300px);
   min-height: 100vh;
   transform: translateX(300px);
@@ -31,7 +37,27 @@ const MainContent = () => {
         <Line />
         <Line />
       </Lines>
-      <Home></Home>
+
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+        <Route path="/about" exact>
+          <AboutPage />
+        </Route>
+        <Route path="/portfolio" exact>
+          <PortfolioPage />
+        </Route>
+        <Route path="/skills" exact>
+          <SkillsPage />
+        </Route>
+        <Route path="/educations" exact>
+          <EducationsPage />
+        </Route>
+        <Route path="/contact" exact>
+          <ContactPage />
+        </Route>
+      </Switch>
     </MainContentStyle>
   );
 };

@@ -3,11 +3,10 @@ import styled from "styled-components";
 import Particle from "../Particle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import social_links from "../data/social_links.json";
 import {
   faGithub,
-  faFacebook,
   faTwitter,
-  faLinkedin,
   faFacebookF,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
@@ -80,11 +79,12 @@ const HomeContentStyle = styled("main")`
       .icon {
         font-size: 2.4rem;
         color: var(--colorSecondary);
+        transition: all 0.4s linear;
       }
     }
   }
 `;
-const Home = () => {
+const HomePage = () => {
   return (
     <HomeStyle>
       <Particle></Particle>
@@ -99,16 +99,32 @@ const Home = () => {
           voluptatum ad veritatis libero mollitia eos modi amet repellendus. Ad.
         </p>
         <aside className="icons">
-          <Link className="link">
+          <Link
+            to={{ pathname: social_links.github }}
+            className="link"
+            target="_blank"
+          >
             <FontAwesomeIcon className="icon" icon={faGithub} />
           </Link>
-          <Link className="link">
+          <Link
+            to={{ pathname: social_links.linkedin }}
+            className="link"
+            target="_blank"
+          >
             <FontAwesomeIcon className="icon" icon={faLinkedinIn} />
           </Link>
-          <Link className="link">
+          <Link
+            to={{ pathname: social_links.facebook }}
+            className="link"
+            target="_blank"
+          >
             <FontAwesomeIcon className="icon" icon={faFacebookF} />
           </Link>
-          <Link className="link">
+          <Link
+            to={{ pathname: social_links.twitter }}
+            className="link"
+            target="_blank"
+          >
             <FontAwesomeIcon className="icon" icon={faTwitter} />
           </Link>
         </aside>
@@ -117,4 +133,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
