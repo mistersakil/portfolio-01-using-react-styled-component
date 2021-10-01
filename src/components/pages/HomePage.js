@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Particle from "../Particle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import social_links from "../data/social_links.json";
+import particle_options from "../data/home_particles.json";
 import {
   faGithub,
   faTwitter,
@@ -85,9 +86,12 @@ const HomeContentStyle = styled("main")`
   }
 `;
 const HomePage = () => {
+  useEffect(() => {
+    document.title = `Home - ${process.env.REACT_APP_PROJECT_NAME}`;
+  }, []);
   return (
     <HomeStyle>
-      <Particle></Particle>
+      <Particle options={particle_options} />
       <HomeContentStyle>
         <h1 className="subHeading">
           Hi, I'm <span>sakil jomadder</span>

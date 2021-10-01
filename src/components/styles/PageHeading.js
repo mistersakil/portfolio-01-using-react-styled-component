@@ -7,6 +7,9 @@ const PageHeadingStyle = styled("h1")`
   letter-spacing: 1px;
   position: relative;
   color: var(--colorSecondary);
+  padding-bottom: 1.2rem;
+  margin-bottom: 7rem;
+  font-family: "Oswald", sans-serif;
   &::after {
     content: "";
     position: absolute;
