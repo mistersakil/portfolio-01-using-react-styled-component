@@ -5,6 +5,7 @@ import Layout from "../styles/Layout";
 import imgAbout from "../../images/about.jpg";
 import Particle from "../Particle";
 import particle_options from "../data/about_particles.json";
+import Button from "../Button";
 const AboutFeatureItemStyle = styled("article")`
   display: flex;
   flex-direction: row;
@@ -127,6 +128,7 @@ const AboutPage = () => {
               />
               <AboutFeatureItem title="degree" info="CSE" />
             </div>
+            <Button>download cv</Button>
           </div>
         </div>
       </AboutPageStyle>
