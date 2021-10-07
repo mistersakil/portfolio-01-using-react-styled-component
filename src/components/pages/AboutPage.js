@@ -128,7 +128,7 @@ const AboutPage = () => {
               />
               <AboutFeatureItem title="degree" info="CSE" />
             </div>
-            <Button>download cv</Button>
+            <Button>download resume</Button>
           </div>
         </div>
       </AboutPageStyle>
