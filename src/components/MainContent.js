@@ -39,9 +39,6 @@ const MainContent = () => {
       </Lines>
 
       <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>
         <Route path="/about" exact>
           <AboutPage />
         </Route>
@@ -56,6 +53,9 @@ const MainContent = () => {
         </Route>
         <Route path="/contact" exact>
           <ContactPage />
+        </Route>
+        <Route path="/" exact>
+          <HomePage />
         </Route>
       </Switch>
     </MainContentStyle>
