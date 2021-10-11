@@ -4,15 +4,10 @@ import PageHeading from "../styles/PageHeading";
 import Layout from "../styles/Layout";
 import Particle from "../Particle";
 import particle_options from "../data/services_particles.json";
-import {
-  faGlobe,
-  faTools,
-  faPaintBrush,
-  faBoxOpen,
-  faBullhorn,
-  faScroll,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import cards from "../data/card_services.json";
+
 const ServicesPageStyle = styled("section")`
   position: relative;
   width: 100%;
@@ -65,13 +60,23 @@ const ServicesPageStyle = styled("section")`
       }
       &:hover {
         border-color: var(--colorBrand);
-        transform: translateY(5px);
+        transform: translateY(3px);
       }
     }
   }
 `;
+const Card = ({ icon, title, info }) => {
+  return (
+    <div className="col">
+      <FontAwesomeIcon className="icon" icon={icon} />
+      <h2 className="cardTitle">{title}</h2>
+      <p className="cardInfo">{info}</p>
+    </div>
+  );
+};
 const ServicesPage = () => {
   const PAGE_HEADING = "Our Services";
+
   useEffect(() => {
     document.title = `${PAGE_HEADING} - ${process.env.REACT_APP_PROJECT_NAME}`;
   }, []);
@@ -81,70 +86,9 @@ const ServicesPage = () => {
       <ServicesPageStyle>
         <PageHeading>{PAGE_HEADING}</PageHeading>
         <div className="row">
-          <div className="col">
-            <FontAwesomeIcon className="icon" icon={faPaintBrush} />
-            <h2 className="cardTitle">web design</h2>
-            <p className="cardInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam officiis harum temporibus commodi sunt, ut sed nam
-              itaque ad dolorum quae facere recusandae, laborum quam hic quas
-              fugiat voluptatem debitis. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Laboriosam officiis harum temporibus commodi
-              sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum
-              quam hic quas fugiat voluptatem debitis.
-            </p>
-          </div>
-          <div className="col">
-            <FontAwesomeIcon className="icon" icon={faGlobe} />
-            <h2 className="cardTitle">frontend web design</h2>
-            <p className="cardInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam officiis harum temporibus commodi sunt, ut sed nam
-              itaque ad dolorum quae facere recusandae, laborum quam hic quas
-              fugiat voluptatem debitis.
-            </p>
-          </div>
-          <div className="col">
-            <FontAwesomeIcon className="icon" icon={faTools} />
-            <h2 className="cardTitle">web development</h2>
-            <p className="cardInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam officiis harum temporibus commodi sunt, ut sed nam
-              itaque ad dolorum quae facere recusandae, laborum quam hic quas
-              fugiat voluptatem debitis.
-            </p>
-          </div>
-          <div className="col">
-            <FontAwesomeIcon className="icon" icon={faBoxOpen} />
-            <h2 className="cardTitle">logo design</h2>
-            <p className="cardInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam officiis harum temporibus commodi sunt, ut sed nam
-              itaque ad dolorum quae facere recusandae, laborum quam hic quas
-              fugiat voluptatem debitis.
-            </p>
-          </div>
-          <div className="col">
-            <FontAwesomeIcon className="icon" icon={faScroll} />
-            <h2 className="cardTitle">banner design</h2>
-            <p className="cardInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam officiis harum temporibus commodi sunt, ut sed nam
-              itaque ad dolorum quae facere recusandae, laborum quam hic quas
-              fugiat voluptatem debitis.
-            </p>
-          </div>
-
-          <div className="col">
-            <FontAwesomeIcon className="icon" icon={faBullhorn} />
-            <h2 className="cardTitle">digital marketing</h2>
-            <p className="cardInfo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam officiis harum temporibus commodi sunt, ut sed nam
-              itaque ad dolorum quae facere recusandae, laborum quam hic quas
-              fugiat voluptatem debitis.
-            </p>
-          </div>
+          {cards.map((card, index) => (
+            <Card key={index} {...card} />
+          ))}
         </div>
       </ServicesPageStyle>
     </Layout>

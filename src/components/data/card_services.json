@@ -1,0 +1,32 @@
+[
+    {
+        "icon" : "paint-brush",
+        "title" : "web design",
+        "info" : "fugiat voluptatem debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis harum temporibus commodi sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum quam hic quas fugiat voluptatem debitis"
+    },
+    {
+        "icon" : "globe",
+        "title" : "frontend web design",
+        "info" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis harum temporibus commodi sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum quam hic quas fugiat voluptatem debitis."
+    },
+    {
+        "icon" : "tools",
+        "title" : "web development",
+        "info" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis harum temporibus commodi sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum quam hic quas fugiat voluptatem debitis."
+    },
+    {
+        "icon" : "box-open",
+        "title" : "logo design",
+        "info" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis harum temporibus commodi sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum quam hic quas fugiat voluptatem debitis."
+    },
+    {
+        "icon" : "scroll",
+        "title" : "banner design",
+        "info" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis harum temporibus commodi sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum quam hic quas fugiat voluptatem debitis."
+    },
+    {
+        "icon" : "bullhorn",
+        "title" : "digital marketing",
+        "info" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis harum temporibus commodi sunt, ut sed nam itaque ad dolorum quae facere recusandae, laborum quam hic quas fugiat voluptatem debitis."
+    }
+]
