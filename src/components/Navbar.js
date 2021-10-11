@@ -89,13 +89,16 @@ const Navbar = () => {
         <NavLink activeClassName="active" className="link" to="/" exact>
           home
         </NavLink>
-        <NavLink className="link" to="/about" exact>
+        <NavLink className="link" to="/about.html" exact>
           about
         </NavLink>
-        <NavLink className="link" to="/contact" exact>
+        <NavLink className="link" to="/services.html" exact>
+          services
+        </NavLink>
+        <NavLink className="link" to="/contact.html" exact>
           contact
         </NavLink>
-        <NavLink className="link" to="/portfolio" exact>
+        <NavLink className="link" to="/portfolio.html" exact>
           portfolio
         </NavLink>
       </nav>

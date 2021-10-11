@@ -7,6 +7,7 @@ import EducationsPage from "./pages/EducationsPage";
 import ContactPage from "./pages/ContactPage";
 import SkillsPage from "./pages/SkillsPage";
 import PortfolioPage from "./pages/PortfolioPage";
+import ServicesPage from "./pages/ServicesPage";
 const MainContentStyle = styled("aside")`
   width: calc(100% - 300px);
   min-height: 100vh;
@@ -39,19 +40,22 @@ const MainContent = () => {
       </Lines>
 
       <Switch>
-        <Route path="/about" exact>
+        <Route path="/about.html" exact>
           <AboutPage />
         </Route>
-        <Route path="/portfolio" exact>
+        <Route path="/services.html" exact>
+          <ServicesPage />
+        </Route>
+        <Route path="/portfolio.html" exact>
           <PortfolioPage />
         </Route>
-        <Route path="/skills" exact>
+        <Route path="/skills.html" exact>
           <SkillsPage />
         </Route>
-        <Route path="/educations" exact>
+        <Route path="/educations.html" exact>
           <EducationsPage />
         </Route>
-        <Route path="/contact" exact>
+        <Route path="/contact.html" exact>
           <ContactPage />
         </Route>
         <Route path="/" exact>
