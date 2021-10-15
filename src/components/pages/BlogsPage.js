@@ -4,9 +4,8 @@ import PageHeading from "../styles/PageHeading";
 import Layout from "../styles/Layout";
 import Particle from "../Particle";
 import particle_options from "../data/services_particles.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import cards from "../data/services_card.json";
+import jsonData from "../data/blogs.js";
 
 const ServicesPageStyle = styled("section")`
   position: relative;
@@ -21,61 +20,58 @@ const ServicesPageStyle = styled("section")`
     justify-content: space-between;
     .col {
       flex: 1 1 30%;
-      height: 30rem;
-      text-align: center;
-      background: var(--bgGreyDark);
-      padding: 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
+      height: 40rem;
+      background: var(--bgGrey);
       color: var(--colorSecondary);
-      border-top: 0.5rem solid var(--bgGrey);
+      padding: 1rem;
       transition: all 0.4s linear;
-      .icon {
-        color: var(--colorBrand);
-        font-size: 5rem;
+      .figure {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transform: skewX(-30deg) scale(1.5);
+          transition: all 0.4s linear;
+        }
       }
       .cardTitle {
-        font-size: 2.4rem;
         text-transform: capitalize;
         font-weight: 700;
         position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          top: 115%;
-          transform: translateX(-50%);
-          width: 50px;
-          height: 2px;
-          background-color: var(--bgBrand);
-        }
-      }
-      .cardInfo {
+        font-size: 2rem;
         color: var(--colorGreyLight);
-        height: 10rem;
-        overflow: hidden;
-        line-height: 2rem;
+        padding-top: 2rem;
+        display: block;
       }
+
       &:hover {
-        border-color: var(--colorBrand);
-        transform: translateY(3px);
+        background: var(--bgGreyDark);
+
+        .figure .img {
+          transform: skewX(0deg) scale(1);
+        }
       }
     }
   }
 `;
-const Card = ({ icon, title, info }) => {
+const Card = ({ img, title, url }) => {
   return (
     <div className="col">
-      <FontAwesomeIcon className="icon" icon={icon} />
-      <h2 className="cardTitle">{title}</h2>
-      <p className="cardInfo">{info}</p>
+      <div className="figure">
+        <img className="img" src={img} alt={img} />
+      </div>
+      <a href={url} className="cardTitle" target="_blank" rel="noreferrer">
+        {title}
+      </a>
     </div>
   );
 };
 const ServicesPage = () => {
-  const PAGE_HEADING = "Our Services";
+  const PAGE_HEADING = "Latest Blogs";
 
   useEffect(() => {
     document.title = `${PAGE_HEADING} - ${process.env.REACT_APP_PROJECT_NAME}`;
@@ -86,8 +82,8 @@ const ServicesPage = () => {
       <ServicesPageStyle>
         <PageHeading>{PAGE_HEADING}</PageHeading>
         <div className="row">
-          {cards.map((card, index) => (
-            <Card key={index} {...card} />
+          {jsonData.map((item, index) => (
+            <Card key={index} {...item} />
           ))}
         </div>
       </ServicesPageStyle>

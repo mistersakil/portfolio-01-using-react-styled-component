@@ -89,14 +89,15 @@ const AboutPageStyle = styled("section")`
   }
 `;
 const AboutPage = () => {
+  const PAGE_TITLE = "about us";
   useEffect(() => {
-    document.title = `About Me - ${process.env.REACT_APP_PROJECT_NAME}`;
+    document.title = `${PAGE_TITLE}- ${process.env.REACT_APP_PROJECT_NAME}`;
   }, []);
   return (
     <Layout>
       <Particle options={particle_options} />
       <AboutPageStyle>
-        <PageHeading>about me</PageHeading>
+        <PageHeading>{PAGE_TITLE}</PageHeading>
         <div className="row">
           <div className="left">
             <figure className="figure">

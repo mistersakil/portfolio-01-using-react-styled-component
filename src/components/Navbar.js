@@ -95,6 +95,9 @@ const Navbar = () => {
         <NavLink className="link" to="/services.html" exact>
           services
         </NavLink>
+        <NavLink className="link" to="/blogs.html" exact>
+          blogs
+        </NavLink>
         <NavLink className="link" to="/contact.html" exact>
           contact
         </NavLink>
