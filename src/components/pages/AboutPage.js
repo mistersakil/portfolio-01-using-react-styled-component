@@ -89,7 +89,7 @@ const AboutPageStyle = styled("section")`
   }
 `;
 const AboutPage = () => {
-  const PAGE_TITLE = "about us";
+  const PAGE_TITLE = "About Us";
   useEffect(() => {
     document.title = `${PAGE_TITLE}- ${process.env.REACT_APP_PROJECT_NAME}`;
   }, []);
@@ -129,7 +129,13 @@ const AboutPage = () => {
               />
               <AboutFeatureItem title="degree" info="CSE" />
             </div>
-            <Button>download resume</Button>
+            <Button
+              value="download resume"
+              textTransform="uppercase"
+              bg="bgBrand"
+              href="https://www.google.com"
+              as="a"
+            />
           </div>
         </div>
       </AboutPageStyle>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-const ButtonStyle = styled("a")`
+const ButtonStyle = styled("button")`
   padding: 1rem 3rem;
   border: none;
   outline: none;
@@ -26,7 +26,6 @@ const ButtonStyle = styled("a")`
     left: 0;
     width: 100%;
     height: 100%;
-
     z-index: -1;
     border-radius: inherit;
     clip-path: inset(50%);
@@ -37,12 +36,8 @@ const ButtonStyle = styled("a")`
     background-color: var(--bgGrey);
   }
 `;
-const Button = ({ children }) => {
-  return (
-    <ButtonStyle textTransform="uppercase" bg="bgBrand">
-      {children}
-    </ButtonStyle>
-  );
+const Button = (props) => {
+  return <ButtonStyle {...props}>{props.value}</ButtonStyle>;
 };
 
 export default Button;

@@ -9,6 +9,7 @@ import SkillsPage from "./pages/SkillsPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import ServicesPage from "./pages/ServicesPage";
 import BlogsPage from "./pages/BlogsPage";
+import NotFound from "./pages/404";
 const MainContentStyle = styled("aside")`
   width: calc(100% - 300px);
   min-height: 100vh;
@@ -65,7 +66,9 @@ const MainContent = () => {
         <Route path="/" exact>
           <HomePage />
         </Route>
-        <Route path="*" exact></Route>
+        <Route path="*" exact>
+          <NotFound />
+        </Route>
       </Switch>
     </MainContentStyle>
   );

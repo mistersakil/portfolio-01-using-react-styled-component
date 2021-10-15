@@ -27,7 +27,7 @@ const ServicesPageStyle = styled("section")`
       transition: all 0.4s linear;
       .figure {
         width: 100%;
-        height: 70%;
+        height: 80%;
         overflow: hidden;
         .img {
           width: 100%;
