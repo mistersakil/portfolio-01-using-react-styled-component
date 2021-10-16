@@ -59,8 +59,10 @@ const ServicesPageStyle = styled("section")`
         line-height: 2rem;
       }
       &:hover {
-        border-color: var(--colorBrand);
-        transform: translateY(3px);
+        background: transparent;
+        border-color: transparent;
+        box-shadow: 0 0 10px 5px var(--bgBrand);
+        border-radius: 10px;
       }
     }
   }
