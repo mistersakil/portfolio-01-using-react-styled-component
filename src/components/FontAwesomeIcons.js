@@ -10,6 +10,9 @@ import {
   faBoxOpen,
   faBullhorn,
   faScroll,
+  faEnvelope,
+  faPhoneAlt,
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -22,5 +25,8 @@ library.add(
   faPaintBrush,
   faBoxOpen,
   faBullhorn,
-  faScroll
+  faScroll,
+  faEnvelope,
+  faPhoneAlt,
+  faMapMarkerAlt
 );

@@ -78,9 +78,9 @@ const ServicesPage = () => {
   }, []);
   return (
     <Layout>
+      <PageHeading>{PAGE_HEADING}</PageHeading>
       <Particle options={particle_options} />
       <ServicesPageStyle>
-        <PageHeading>{PAGE_HEADING}</PageHeading>
         <div className="row">
           {jsonData.map((item, index) => (
             <Card key={index} {...item} />
